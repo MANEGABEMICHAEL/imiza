@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/assets/IMIZATUMAINILOGO-CfI7fqPy.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imiza Tumaini - Familles Militaires Congolaises</title>
+  
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  
+  <!-- Anti-caching -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <!-- Security Scripts -->
+  <script>
+    // Prevent console access
+    (function() {
+      var _log = console.log;
+      var _warn = console.warn;
+      var _error = console.error;
+      var _info = console.info;
+      
+      console.log = function() {};
+      console.warn = function() {};
+      console.error = function() {};
+      console.info = function() {};
+      
+      // Detect dev tools
+      var devtools = {
+        open: false,
+        orientation: null
+      };
+      
+      var threshold = 160;
+      setInterval(function() {
+        if (window.outerHeight - window.innerHeight > threshold || 
+            window.outerWidth - window.innerWidth > threshold) {
+          if (!devtools.open) {
+            devtools.open = true;
+            document.body.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial; background: #000; color: #fff; text-align: center;"><h1>🚫 ACCÈS NON AUTORISÉ</h1><p>Les outils de développement ne sont pas autorisés sur ce site.</p></div>';
+          }
+        } else {
+          devtools.open = false;
+        }
+      }, 500);
+    })();
+    
+    // Prevent right click globally
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      return false;
+    });
+    
+    // Prevent text selection
+    document.addEventListener('selectstart', function(e) {
+      e.preventDefault();
+      return false;
+    });
+    
+    // Prevent drag
+    document.addEventListener('dragstart', function(e) {
+      e.preventDefault();
+      return false;
+    });
+    
+    // Prevent keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+      if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S' || e.key === 'c' || e.key === 'C' || e.key === 'v' || e.key === 'V' || e.key === 'u' || e.key === 'U')) {
+        e.preventDefault();
+        return false;
+      }
+      if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.shiftKey && e.key === 'J') || (e.ctrlKey && e.shiftKey && e.key === 'C')) {
+        e.preventDefault();
+        return false;
+      }
+    });
+    
+    // Anti-tampering (disabled for normal React operation)
+    // var originalHTML = document.documentElement.outerHTML;
+    // setInterval(function() {
+    //   if (document.documentElement.outerHTML !== originalHTML) {
+    //     document.body.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial; background: #000; color: #fff; text-align: center;"><h1>⚠️ MODIFICATION DÉTECTÉE</h1><p>Redirection en cours...</p></div>';
+    //     setTimeout(function() {
+    //       window.location.reload();
+    //     }, 2000);
+    //   }
+    // }, 1000);
+    
+    // Session timeout
+    var sessionTimeout = setTimeout(function() {
+      document.body.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial; background: #000; color: #fff; text-align: center;"><h1>⏰ SESSION EXPIRÉE</h1><p>Veuillez recharger la page.</p></div>';
+    }, 300000); // 5 minutes
+    
+    // Reset session on activity
+    ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'].forEach(function(event) {
+      document.addEventListener(event, function() {
+        clearTimeout(sessionTimeout);
+        sessionTimeout = setTimeout(function() {
+          document.body.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial; background: #000; color: #fff; text-align: center;"><h1>⏰ SESSION EXPIRÉE</h1><p>Veuillez recharger la page.</p></div>';
+        }, 300000);
+      });
+    });
+  </script>
+  <script type="module" crossorigin src="/assets/index-DsDwdvhN.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CSbAJwra.css">
+</head>
+<body>
+  <div id="root"></div>
+  
+  <!-- Security monitoring -->
+  <script>
+    // Monitor for unauthorized access attempts
+    var accessAttempts = 0;
+    var maxAttempts = 3;
+    
+    window.addEventListener('error', function(e) {
+      accessAttempts++;
+      if (accessAttempts >= maxAttempts) {
+        document.body.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial; background: #000; color: #fff; text-align: center;"><h1>🚫 ACCÈS BLOQUÉ</h1><p>Trop de tentatives non autorisées détectées.</p></div>';
+      }
+    });
+    
+    // Prevent inspection
+    setInterval(function() {
+      if (window.debugger || window._debugger) {
+        document.body.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial; background: #000; color: #fff; text-align: center;"><h1>🚫 INSPECTION BLOQUÉE</h1><p>L\'inspection du code n\'est pas autorisée.</p></div>';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

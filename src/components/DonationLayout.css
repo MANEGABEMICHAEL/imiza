@@ -1,0 +1,340 @@
+/* Donation Two Column Layout */
+.donation-two-column-layout {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 30px;
+  margin-top: 30px;
+  align-items: start;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.donation-left-column {
+  /* Colonne de gauche - Formulaire de don avec composants réduits */
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.donation-right-column {
+  /* Colonne de droite - Interfaces centrées */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-self: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .donation-two-column-layout {
+    grid-template-columns: 450px 1fr;
+    gap: 25px;
+    max-width: 1200px;
+  }
+  
+  .donation-right-column {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .donation-two-column-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 600px;
+    align-items: start;
+  }
+  
+  .donation-left-column {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+    display: block;
+    order: 2; /* Mettre le formulaire en dernier sur mobile */
+  }
+  
+  .donation-right-column {
+    order: 1; /* Mettre les interfaces en premier sur mobile */
+    max-width: 100%;
+    justify-self: stretch;
+  }
+}
+
+@media (max-width: 768px) {
+  .donation-two-column-layout {
+    gap: 15px;
+  }
+  
+  .donation-right-column {
+    gap: 15px;
+  }
+}
+
+/* Amélioration du style pour les cartes dans la colonne de droite */
+.donation-right-column .quick-access-card,
+.donation-right-column .admin-login-card,
+.donation-right-column .user-dashboard-access {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.donation-right-column .quick-access-card:hover,
+.donation-right-column .admin-login-card:hover,
+.donation-right-column .user-dashboard-access:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent-color);
+}
+
+/* Titres des sections dans la colonne de droite */
+.donation-right-column h3 {
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Espacement optimal pour les formulaires */
+.donation-right-column .form-group {
+  margin-bottom: 15px;
+}
+
+.donation-right-column input {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.donation-right-column input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.1);
+}
+
+.donation-right-column .phone-access {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.donation-right-column .phone-access input {
+  flex: 1;
+}
+
+.donation-right-column .phone-access button {
+  white-space: nowrap;
+  padding: 12px 20px;
+}
+
+/* Style pour le formulaire de don dans la colonne de gauche */
+.donation-left-column .donation-container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.donation-left-column .donation-form h2 {
+  color: var(--accent-color);
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.donation-left-column .donation-form h3 {
+  color: var(--text-primary);
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+}
+
+.donation-left-column .form-group {
+  margin-bottom: 4px;
+}
+
+.donation-left-column .donor-info {
+  margin-bottom: 8px;
+}
+
+.donation-left-column .existing-donor-welcome {
+  margin-bottom: 6px;
+  padding: 5px;
+  background: rgba(74, 222, 128, 0.1);
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.donation-left-column .existing-donor-welcome h3 {
+  margin-bottom: 2px;
+  font-size: 0.85rem;
+}
+
+.donation-left-column .existing-donor-welcome p {
+  margin-bottom: 4px;
+  font-size: 0.75rem;
+}
+
+.donation-left-column .amount-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.donation-left-column .amount-btn {
+  padding: 5px 2px;
+  font-size: 0.75rem;
+}
+
+.donation-left-column .payment-methods {
+  margin-bottom: 6px;
+}
+
+.donation-left-column .payment-option {
+  padding: 5px;
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+}
+
+.donation-left-column .payment-logo {
+  font-size: 1rem;
+}
+
+.donation-left-column .btn-primary {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  font-size: 0.8rem;
+}
+
+.donation-left-column input {
+  padding: 6px 8px;
+  font-size: 0.8rem;
+}
+
+.donation-left-column p {
+  font-size: 0.7rem;
+  margin-top: 2px;
+}
+
+/* Scrollbar personnalisée pour la colonne de gauche */
+.donation-left-column::-webkit-scrollbar {
+  width: 6px;
+}
+
+.donation-left-column::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.donation-left-column::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 3px;
+}
+
+.donation-left-column::-webkit-scrollbar-thumb:hover {
+  background: #22c55e;
+}
+
+/* Amélioration du responsive pour les formulaires */
+@media (max-width: 768px) {
+  .donation-left-column .donation-container {
+    padding: 12px;
+    max-width: 100%;
+  }
+  
+  .donation-left-column .donation-form h2 {
+    font-size: 1.2rem;
+  }
+  
+  .donation-left-column .amount-options {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  
+  .donation-left-column .amount-btn {
+    padding: 5px 2px;
+    font-size: 0.8rem;
+  }
+  
+  .donation-right-column .phone-access {
+    flex-direction: column;
+  }
+  
+  .donation-right-column .phone-access button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .donation-left-column .donation-container {
+    padding: 10px;
+  }
+  
+  .donation-left-column .donation-form h2 {
+    font-size: 1.1rem;
+  }
+  
+  .donation-left-column .amount-options {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+  }
+  
+  .donation-left-column .amount-btn {
+    padding: 4px 1px;
+    font-size: 0.75rem;
+  }
+  
+  .donation-left-column .payment-option {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+  
+  .donation-left-column .payment-logo {
+    font-size: 1rem;
+  }
+}
+
+/* Animation d'entrée pour les colonnes */
+.donation-two-column-layout > div {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.donation-left-column {
+  animation-delay: 0.1s;
+}
+
+.donation-right-column {
+  animation-delay: 0.2s;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

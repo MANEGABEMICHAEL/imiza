@@ -1,0 +1,109 @@
+/* Admin Login Section Styles */
+.admin-login-section {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-login-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+}
+
+.admin-login-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.admin-login-card .form-group {
+  margin-bottom: 1rem;
+}
+
+.admin-login-card input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.admin-login-card input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.2);
+}
+
+.admin-login-card .btn-primary {
+  width: 100%;
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* User Dashboard Access */
+.user-dashboard-access {
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid var(--accent-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.user-dashboard-access h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.user-dashboard-access p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0 0 1rem 0;
+}
+
+.user-dashboard-access .btn-secondary {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-dashboard-access .btn-secondary:hover {
+  background: #22c55e;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design for Dashboard */
+@media (max-width: 768px) {
+  .admin-login-section {
+    padding: 1rem;
+  }
+  
+  .admin-login-card {
+    padding: 1.5rem;
+  }
+  
+  .user-dashboard-access {
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+}
