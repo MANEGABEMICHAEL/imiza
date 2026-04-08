@@ -221,7 +221,7 @@ function App() {
       aPropos: "À Propos",
       services: "Services",
       contactFooter: "Contact",
-      copyright: "© 2025 Imiza tumaini. Tous droits réservés.",
+      copyright: `© ${new Date().getFullYear()} Imiza tumaini. Tous droits réservés.`,
       
       // Modal rendez-vous
       prendreRendezVousTitle: "Prendre un Rendez-vous",
@@ -243,6 +243,84 @@ function App() {
       // Messages de succès
       rendezVousPris: "✅ Rendez-vous pris avec succès! Nous vous contacterons prochainement.",
       inscriptionReussie: "✅ Inscription réussie! Nous vous enverrons les détails par email.",
+      
+      // Textes statistiques
+      famillesSoutenues: "Familles Soutenues",
+      formationsDisponibles: "Formations Disponibles",
+      expertsBenevoles: "Experts Bénévoles",
+      anneesExperience: "Années d'Expérience",
+      
+      // Objectifs
+      soutenir10000Familles: "Soutenir 10 000 Familles",
+      objectif10000Text: "D'ici 2025, nous visons à fournir un soutien complet à 10 000 familles militaires à travers la RDC.",
+      centFormationsParAn: "100 Formations par An",
+      centFormationsText: "Organiser 100 sessions de formation professionnelle et psychologique chaque année pour autonomiser les familles.",
+      creer500Emplois: "Créer 500 Emplois",
+      creer500EmploisText: "Générer 500 opportunités d'emploi pour les membres des familles militaires à travers nos programmes de développement économique.",
+      
+      // Valeurs
+      excellence: "Excellence",
+      excellenceText: "Poursuivre l'excellence dans tous nos services, en maintenant les plus hauts standards de qualité et de professionnalisme.",
+      servicesQualite: "Services de qualité supérieure",
+      formationContinue: "Formation continue du personnel",
+      ameliorationContinue: "Amélioration continue",
+      
+      resilience: "Résilience",
+      resilienceText: "Développer la force intérieure et la capacité à rebondir face aux adversités, transformant les défis en opportunités de croissance.",
+      renforcementPsychologique: "Renforcement psychologique",
+      soutienTransitions: "Soutien dans les transitions",
+      cultivationEndurance: "Cultivation de l'endurance",
+      
+      // Messages d'erreur et sécurité
+      sessionExpiree: "⏰ SESSION EXPIRÉE - Veuillez vous reconnecter",
+      tentativeModification: "TENTATIVE DE MODIFICATION",
+      accesNonAutorise: "ACCÈS NON AUTORISÉ",
+      erreurChargementImage: "Erreur de chargement de l'image",
+      imageChargeeSucces: "Image chargée avec succès",
+      
+      // Dashboard Admin
+      dashboard: "Tableau de bord",
+      statistiques: "Statistiques",
+      utilisateurs: "Utilisateurs",
+      parametres: "Paramètres",
+      securite: "Sécurité",
+      deconnexion: "Déconnexion",
+      actualiser: "Actualiser",
+      total: "Total",
+      montant: "Montant",
+      date: "Date",
+      heure: "Heure",
+      statut: "Statut",
+      enCours: "En cours",
+      termine: "Terminé",
+      recu: "Reçu",
+      enAttente: "En attente",
+      echoue: "Échoué",
+      
+      // Messages génériques
+      chargerPlus: "Charger plus",
+      voirPlus: "Voir plus",
+      enSavoirPlus: "En savoir plus",
+      lireLaSuite: "Lire la suite",
+      fermerMenu: "Fermer le menu",
+      ouvrirMenu: "Ouvrir le menu",
+      
+      // Navigation
+      pagePrecedente: "Page précédente",
+      pageSuivante: "Page suivante",
+      retourAccueil: "Retour à l'accueil",
+      
+      // Validation formulaires
+      champsObligatoires: "Veuillez remplir tous les champs obligatoires",
+      emailInvalide: "Veuillez entrer une adresse email valide",
+      telephoneInvalide: "Veuillez entrer un numéro de téléphone valide",
+      nomRequis: "Le nom est requis",
+      
+      // Messages de succès génériques
+      operationReussie: "Opération réussie",
+      sauvegardeReussie: "Sauvegarde réussie",
+      modificationReussie: "Modification réussie",
+      suppressionReussie: "Suppression réussie"
     },
     ln: {
       accueil: "Lisusu",
@@ -272,7 +350,7 @@ function App() {
       aPropos: "Na Likolo",
       services: "Ba Services",
       contactFooter: "Kotisa",
-      copyright: "© 2025 Imiza tumaini. Ba droits nyonso ezali.",
+      copyright: `© ${new Date().getFullYear()} Imiza tumaini. Bakonzi nyonso zomi.`,
       
       // Soutien Psychologique - Lingala
       bienEtreMental: "Bolamu ya Moko ya Moyo Eza Priorité ya Biso",
@@ -330,7 +408,85 @@ function App() {
       
       // Messages de succès - Lingala
       rendezVousPris: "✅ Rendez-vous ekoki pona! Tosala contact na yo mboka.",
-      inscriptionReussie: "✅ Inscription ekoki! Tosala ba détails na email na yo."
+      inscriptionReussie: "✅ Inscription ekoki! Tosala ba détails na email na yo.",
+      
+      // Textes statistiques - Lingala
+      famillesSoutenues: "Baninga Bosongami",
+      formationsDisponibles: "Bilengi Ezali",
+      expertsBenevoles: "Ba Experts ya Bomoi",
+      anneesExperience: "Mbula ya Lisusu",
+      
+      // Objectifs - Lingala
+      soutenir10000Familles: "Tia Bosongo 10 000 ya Baninga",
+      objectif10000Text: "Kini 2025, bisengeli kosala bosongo nyonso 10 000 ya baninga ya basoldat na mboka ya RDC.",
+      centFormationsParAn: "Bilengi 100 na Mboka",
+      centFormationsText: "Kolandisa bilengi 100 ya bosango mpe ya mikolo mikolo mboka na mboka mpo na kokoma baninga bakoki koyoka moko.",
+      creer500Emplois: "Kola Mosala 500",
+      creer500EmploisText: "Kotia mboka 500 ya mikolo mikolo mpo na bango ya baninga ya basoldat na ba programmes na biso ya bobongo ya ekonomi.",
+      
+      // Valeurs - Lingala
+      excellence: "Malamu Mingi",
+      excellenceText: "Kosala malamu mingi na bisika nyonso ya biso, mpe kokoma ba standards ya malamu mpe ya bosango ya mikolo mikolo.",
+      servicesQualite: "Bisika ya malamu ya likolo",
+      formationContinue: "Bilengi ya mikolo mikolo ya batu",
+      ameliorationContinue: "Kobongisa mikolo mikolo",
+      
+      resilience: "Boboli ya Makasi",
+      resilienceText: "Kokoma makasi ya inside mpe bokoki kozongela na ba advesité, kobongisa ba défis na mboka ya bobongi.",
+      renforcementPsychologique: "Kokoma makasi ya moko",
+      soutienTransitions: "Bosongo na ba transitions",
+      cultivationEndurance: "Kolimbisa endurance",
+      
+      // Messages d'erreur et sécurité - Lingala
+      sessionExpiree: "⏰ SESSION EKOMI - Kokoka reconnecter",
+      tentativeModification: "TENTATIVE YA MODIFICATION",
+      accesNonAutorise: "ACCÈS EZALI TE",
+      erreurChargementImage: "Fusuma ya kosala image",
+      imageChargeeSucces: "Image esali malamu",
+      
+      // Dashboard Admin - Lingala
+      dashboard: "Tableau ya bord",
+      statistiques: "Ba Statistiques",
+      utilisateurs: "Ba Utilisateurs",
+      parametres: "Ba Paramètres",
+      securite: "Sécurité",
+      deconnexion: "Kokoka kati",
+      actualiser: "Kosala ya sika",
+      total: "Total",
+      montant: "Montant",
+      date: "Date",
+      heure: "Heure",
+      statut: "Statut",
+      enCours: "Ekokoki",
+      termine: "Ekomi",
+      recu: "Emonani",
+      enAttente: "Ezali koyoka",
+      echoue: "Ekomi na mboka",
+      
+      // Messages génériques - Lingala
+      chargerPlus: "Tia mbula",
+      voirPlus: "Lona malamu",
+      enSavoirPlus: "Koyeba malamu",
+      lireLaSuite: "Koma kosala",
+      fermerMenu: "Kanga menu",
+      ouvrirMenu: "Yanga menu",
+      
+      // Navigation - Lingala
+      pagePrecedente: "Page ya liboso",
+      pageSuivante: "Page ya nsuka",
+      retourAccueil: "Kozwa na lisusu",
+      
+      // Validation formulaires - Lingala
+      champsObligatoires: "Kosala ba champs nyonso ya obligatoire",
+      emailInvalide: "Kotia email ya malamu",
+      telephoneInvalide: "Kotia telephone ya malamu",
+      nomRequis: "Nkombo ezali ya obligatoire",
+      
+      // Messages de succès génériques - Lingala
+      operationReussie: "Opération ekoki",
+      sauvegardeReussie: "Sauvegarde ekoki",
+      modificationReussie: "Modification ekoki",
+      suppressionReussie: "Suppression ekoki"
     },
     en: {
       accueil: "Home",
@@ -360,7 +516,7 @@ function App() {
       aPropos: "About",
       services: "Services",
       contactFooter: "Contact",
-      copyright: "© 2025 Imiza tumaini. All rights reserved.",
+      copyright: `© ${new Date().getFullYear()} Imiza tumaini. All rights reserved.`,
       
       // Soutien Psychologique - English
       bienEtreMental: "Your Mental Well-being is Our Priority",
@@ -418,7 +574,85 @@ function App() {
       
       // Messages de succès - English
       rendezVousPris: "✅ Appointment taken successfully! We will contact you soon.",
-      inscriptionReussie: "✅ Registration successful! We will send you details by email."
+      inscriptionReussie: "✅ Registration successful! We will send you details by email.",
+      
+      // Textes statistiques - English
+      famillesSoutenues: "Supported Families",
+      formationsDisponibles: "Available Trainings",
+      expertsBenevoles: "Volunteer Experts",
+      anneesExperience: "Years of Experience",
+      
+      // Objectifs - English
+      soutenir10000Familles: "Support 10,000 Families",
+      objectif10000Text: "By 2025, we aim to provide complete support to 10,000 military families across the DRC.",
+      centFormationsParAn: "100 Trainings per Year",
+      centFormationsText: "Organize 100 professional and psychological training sessions each year to empower families.",
+      creer500Emplois: "Create 500 Jobs",
+      creer500EmploisText: "Generate 500 employment opportunities for military family members through our economic development programs.",
+      
+      // Valeurs - English
+      excellence: "Excellence",
+      excellenceText: "Pursue excellence in all our services, maintaining the highest standards of quality and professionalism.",
+      servicesQualite: "Superior quality services",
+      formationContinue: "Continuous staff training",
+      ameliorationContinue: "Continuous improvement",
+      
+      resilience: "Resilience",
+      resilienceText: "Develop inner strength and the ability to bounce back from adversity, turning challenges into growth opportunities.",
+      renforcementPsychologique: "Psychological strengthening",
+      soutienTransitions: "Support in transitions",
+      cultivationEndurance: "Cultivating endurance",
+      
+      // Messages d'erreur et sécurité - English
+      sessionExpiree: "⏰ SESSION EXPIRED - Please reconnect",
+      tentativeModification: "MODIFICATION ATTEMPT",
+      accesNonAutorise: "UNAUTHORIZED ACCESS",
+      erreurChargementImage: "Image loading error",
+      imageChargeeSucces: "Image loaded successfully",
+      
+      // Dashboard Admin - English
+      dashboard: "Dashboard",
+      statistiques: "Statistics",
+      utilisateurs: "Users",
+      parametres: "Settings",
+      securite: "Security",
+      deconnexion: "Logout",
+      actualiser: "Refresh",
+      total: "Total",
+      montant: "Amount",
+      date: "Date",
+      heure: "Time",
+      statut: "Status",
+      enCours: "In progress",
+      termine: "Completed",
+      recu: "Received",
+      enAttente: "Pending",
+      echoue: "Failed",
+      
+      // Messages génériques - English
+      chargerPlus: "Load more",
+      voirPlus: "See more",
+      enSavoirPlus: "Learn more",
+      lireLaSuite: "Read more",
+      fermerMenu: "Close menu",
+      ouvrirMenu: "Open menu",
+      
+      // Navigation - English
+      pagePrecedente: "Previous page",
+      pageSuivante: "Next page",
+      retourAccueil: "Back to home",
+      
+      // Validation formulaires - English
+      champsObligatoires: "Please fill in all required fields",
+      emailInvalide: "Please enter a valid email address",
+      telephoneInvalide: "Please enter a valid phone number",
+      nomRequis: "Name is required",
+      
+      // Messages de succès génériques - English
+      operationReussie: "Operation successful",
+      sauvegardeReussie: "Save successful",
+      modificationReussie: "Modification successful",
+      suppressionReussie: "Deletion successful"
     },
     sw: {
       accueil: "Nyumbani",
@@ -448,7 +682,7 @@ function App() {
       aPropos: "Kuhusu",
       services: "Huduma",
       contactFooter: "Mawasiliano",
-      copyright: "© 2025 Imiza tumaini. Haki zote zimehifadhiwa.",
+      copyright: `© ${new Date().getFullYear()} Imiza tumaini. Haki zote zimehifadhiwa.`,
       
       // Soutien Psychologique - Swahili
       bienEtreMental: "Afya Yako ya Akili ni Kipaumbele Chetu",
@@ -505,8 +739,86 @@ function App() {
       confirmerInscription: "Thibitisha Usajili",
       
       // Messages de succès - Swahili
-      rendezVousPris: "✅ Rendezvous limechukuliwa! Tutawasiliana nawe hivi karibuni.",
-      inscriptionReussie: "✅ Usajili umefanikiwa! Tutakutumia maelezo kwa barua pepe."
+      rendezVousPris: "✅ Rendezvous imechukuliwa kwa mafanikio! Tutawasiliana nawe hivi karibuni.",
+      inscriptionReussie: "✅ Usajili umefanikiwa! Tutakutumia maelezo kwa barua pepe.",
+      
+      // Textes statistiques - Swahili
+      famillesSoutenues: "Familia Zilizosaidiwa",
+      formationsDisponibles: "Mafunzo Yanapatikana",
+      expertsBenevoles: "Wataalamu wa Kujitolea",
+      anneesExperience: "Miaka ya Uzoefu",
+      
+      // Objectifs - Swahili
+      soutenir10000Familles: "Kusaidia Familia 10,000",
+      objectif10000Text: "Kufikia 2025, tunalenga kutoa msaada kamili kwa familia 10,000 za wanajeshi katika DRC.",
+      centFormationsParAn: "Mafunzo 100 kwa Mwaka",
+      centFormationsText: "Kuandaa mafunzo 100 ya kitaalamu na ya akili kila mwaka ili kuwawezesha familia.",
+      creer500Emplois: "Kuunda Ajira 500",
+      creer500EmploisText: "Kuzalisha fursa 500 za ajira kwa wanafamilia wa wanajeshi kupitia miradi yetu ya maendeleo ya kiuchumi.",
+      
+      // Valeurs - Swahili
+      excellence: "Uzuri wa Juu",
+      excellenceText: "Kufuata uzuri wa juu katika huduma zetu zote, kwa kudumisha viwango vya juu vya ubora na utaalamu.",
+      servicesQualite: "Huduma za ubora wa juu",
+      formationContinue: "Mafunzo ya mara kwa mara ya wafanyakazi",
+      ameliorationContinue: "Kuboresha mara kwa mara",
+      
+      resilience: "Uvumilivu",
+      resilienceText: "Kukuza nguvu ya ndani na uwezo wa kurudi nyuma ya changamoto, kubadilisha changamoto kuwa fursa za ukuaji.",
+      renforcementPsychologique: "Kuimarisha akili",
+      soutienTransitions: "Msaada katika mabadiliko",
+      cultivationEndurance: "Kustawisha uvumilivu",
+      
+      // Messages d'erreur et sécurité - Swahili
+      sessionExpiree: "⏰ SESSION IMEKWISHA - Tafadhali ungia upya",
+      tentativeModification: "jaribio la kubadilisha",
+      accesNonAutorise: "UFIKIAJI HAUJARIDHIWA",
+      erreurChargementImage: "Hitilafu la kupakia picha",
+      imageChargeeSucces: "Picha imewekwa kwa mafanikio",
+      
+      // Dashboard Admin - Swahili
+      dashboard: "Dashibodi",
+      statistiques: "Takwimu",
+      utilisateurs: "Watumiaji",
+      parametres: "Mipangilio",
+      securite: "Usalama",
+      deconnexion: "Toka",
+      actualiser: "Onyesha upya",
+      total: "Jumla",
+      montant: "Kiasi",
+      date: "Tarehe",
+      heure: "Saa",
+      statut: "Hali",
+      enCours: "Inaendelea",
+      termine: "Imekamilika",
+      recu: "Imepokelewa",
+      enAttente: "Inasubiri",
+      echoue: "Imeshindwa",
+      
+      // Messages génériques - Swahili
+      chargerPlus: "Pakia zaidi",
+      voirPlus: "Ona zaidi",
+      enSavoirPlus: "Jifunze zaidi",
+      lireLaSuite: "Soma zaidi",
+      fermerMenu: "Funga menyu",
+      ouvrirMenu: "Fungua menyu",
+      
+      // Navigation - Swahili
+      pagePrecedente: "Ukurasa wa awali",
+      pageSuivante: "Ukurasa unaofuata",
+      retourAccueil: "Rudi nyumbani",
+      
+      // Validation formulaires - Swahili
+      champsObligatoires: "Tafadhali jaza sehemu zote zinazohitajika",
+      emailInvalide: "Tafadhali ingiza anwani halali ya barua pepe",
+      telephoneInvalide: "Tafadhali ingiza namba halali ya simu",
+      nomRequis: "Jina linahitajika",
+      
+      // Messages de succès génériques - Swahili
+      operationReussie: "Opereshoni imefanikiwa",
+      sauvegardeReussie: "Kuhifadhi kumefanikiwa",
+      modificationReussie: "Mabadiliko yamefanikiwa",
+      suppressionReussie: "Ufutaji umefanikiwa"
     },
     es: {
       accueil: "Inicio",
@@ -536,7 +848,7 @@ function App() {
       aPropos: "Acerca de",
       services: "Servicios",
       contactFooter: "Contacto",
-      copyright: "© 2025 Imiza tumaini. Todos los derechos reservados.",
+      copyright: `© ${new Date().getFullYear()} Imiza tumaini. Todos los derechos reservados.`,
       
       // Soutien Psychologique - Espagnol
       bienEtreMental: "Su Bienestar Mental es Nuestra Prioridad",
@@ -594,7 +906,85 @@ function App() {
       
       // Messages de succès - Espagnol
       rendezVousPris: "✅ ¡Cita tomada con éxito! Nos pondremos en contacto con usted pronto.",
-      inscriptionReussie: "✅ ¡Inscripción exitosa! Le enviaremos los detalles por email."
+      inscriptionReussie: "✅ ¡Inscripción exitosa! Le enviaremos los detalles por email.",
+      
+      // Textes statistiques - Espagnol
+      famillesSoutenues: "Familias Apoyadas",
+      formationsDisponibles: "Formaciones Disponibles",
+      expertsBenevoles: "Expertos Voluntarios",
+      anneesExperience: "Años de Experiencia",
+      
+      // Objectifs - Espagnol
+      soutenir10000Familles: "Apoyar 10,000 Familias",
+      objectif10000Text: "Para 2025, nuestro objetivo es proporcionar apoyo completo a 10,000 familias militares en toda la RDC.",
+      centFormationsParAn: "100 Formaciones por Año",
+      centFormationsText: "Organizar 100 sesiones de formación profesional y psicológica cada año para empoderar a las familias.",
+      creer500Emplois: "Crear 500 Empleos",
+      creer500EmploisText: "Generar 500 oportunidades de empleo para miembros de familias militares a través de nuestros programas de desarrollo económico.",
+      
+      // Valeurs - Espagnol
+      excellence: "Excelencia",
+      excellenceText: "Buscar la excelencia en todos nuestros servicios, manteniendo los más altos estándares de calidad y profesionalismo.",
+      servicesQualite: "Servicios de calidad superior",
+      formationContinue: "Formación continua del personal",
+      ameliorationContinue: "Mejora continua",
+      
+      resilience: "Resiliencia",
+      resilienceText: "Desarrollar la fuerza interior y la capacidad de recuperarse ante la adversidad, convirtiendo los desafíos en oportunidades de crecimiento.",
+      renforcementPsychologique: "Fortalecimiento psicológico",
+      soutienTransitions: "Apoyo en transiciones",
+      cultivationEndurance: "Cultivo de resistencia",
+      
+      // Messages d'erreur et sécurité - Espagnol
+      sessionExpiree: "SESIÓN EXPIRADA - Por favor reconéctese",
+      tentativeModification: "INTENTO DE MODIFICACIÓN",
+      accesNonAutorise: "ACCESO NO AUTORIZADO",
+      erreurChargementImage: "Error al cargar imagen",
+      imageChargeeSucces: "Imagen cargada exitosamente",
+      
+      // Dashboard Admin - Espagnol
+      dashboard: "Panel de Control",
+      statistiques: "Estadísticas",
+      utilisateurs: "Usuarios",
+      parametres: "Configuración",
+      securite: "Seguridad",
+      deconnexion: "Cerrar sesión",
+      actualiser: "Actualizar",
+      total: "Total",
+      montant: "Monto",
+      date: "Fecha",
+      heure: "Hora",
+      statut: "Estado",
+      enCours: "En progreso",
+      termine: "Completado",
+      recu: "Recibido",
+      enAttente: "Pendiente",
+      echoue: "Fallido",
+      
+      // Messages génériques - Espagnol
+      chargerPlus: "Cargar más",
+      voirPlus: "Ver más",
+      enSavoirPlus: "Saber más",
+      lireLaSuite: "Leer más",
+      fermerMenu: "Cerrar menú",
+      ouvrirMenu: "Abrir menú",
+      
+      // Navigation - Espagnol
+      pagePrecedente: "Página anterior",
+      pageSuivante: "Página siguiente",
+      retourAccueil: "Volver al inicio",
+      
+      // Validation formulaires - Espagnol
+      champsObligatoires: "Por favor complete todos los campos obligatorios",
+      emailInvalide: "Por favor ingrese una dirección de email válida",
+      telephoneInvalide: "Por favor ingrese un número de teléfono válido",
+      nomRequis: "El nombre es requerido",
+      
+      // Messages de succès génériques - Espagnol
+      operationReussie: "Operación exitosa",
+      sauvegardeReussie: "Guardado exitoso",
+      modificationReussie: "Modificación exitosa",
+      suppressionReussie: "Eliminación exitosa"
     },
     ru: {
       accueil: "Главная",
@@ -624,7 +1014,7 @@ function App() {
       aPropos: "О нас",
       services: "Услуги",
       contactFooter: "Контакт",
-      copyright: "© 2025 Imiza tumaini. Все права защищены.",
+      copyright: `© ${new Date().getFullYear()} Imiza tumaini. Все права защищены.`,
       
       // Soutien Psychologique - Russe
       bienEtreMental: "Ваше Психическое Здоровье - Наш Приоритет",
@@ -682,7 +1072,85 @@ function App() {
       
       // Messages de succès - Russe
       rendezVousPris: "✅ Прием успешно записан! Мы свяжемся с вами в ближайшее время.",
-      inscriptionReussie: "✅ Запись успешна! Мы отправим вам детали по email."
+      inscriptionReussie: "✅ Запись успешна! Мы отправим вам детали по email.",
+      
+      // Textes statistiques - Russe
+      famillesSoutenues: "Поддерживаемые Семьи",
+      formationsDisponibles: "Доступные Обучения",
+      expertsBenevoles: "Волонтеры-Эксперты",
+      anneesExperience: "Годы Опыта",
+      
+      // Objectifs - Russe
+      soutenir10000Familles: "Поддержать 10,000 Семей",
+      objectif10000Text: "К 2025 году наша цель - предоставить полную поддержку 10,000 военным семьям по всей ДРК.",
+      centFormationsParAn: "100 Обучений в Год",
+      centFormationsText: "Организовать 100 профессиональных и психологических обучающих сессий каждый год для расширения возможностей семей.",
+      creer500Emplois: "Создать 500 Рабочих Мест",
+      creer500EmploisText: "Создать 500 возможностей трудоустройства для членов военных семей через наши программы экономического развития.",
+      
+      // Valeurs - Russe
+      excellence: "Превосходство",
+      excellenceText: "Стремиться к превосходству во всех наших услугах, поддерживая самые высокие стандарты качества и профессионализма.",
+      servicesQualite: "Услуги высшего качества",
+      formationContinue: "Непрерывное обучение персонала",
+      ameliorationContinue: "Непрерывное улучшение",
+      
+      resilience: "Устойчивость",
+      resilienceText: "Развивать внутреннюю силу и способность восстанавливаться после трудностей, превращая вызовы в возможности роста.",
+      renforcementPsychologique: "Психологическое укрепление",
+      soutienTransitions: "Поддержка в переходах",
+      cultivationEndurance: "Воспитание выносливости",
+      
+      // Messages d'erreur et sécurité - Russe
+      sessionExpiree: "СЕССИЯ ИСТЕКЛА - Пожалуйста, подключитесь снова",
+      tentativeModification: "ПОПЫТКА МОДИФИКАЦИИ",
+      accesNonAutorise: "НЕАВТОРИЗОВАННЫЙ ДОСТУП",
+      erreurChargementImage: "Ошибка загрузки изображения",
+      imageChargeeSucces: "Изображение успешно загружено",
+      
+      // Dashboard Admin - Russe
+      dashboard: "Панель Управления",
+      statistiques: "Статистика",
+      utilisateurs: "Пользователи",
+      parametres: "Настройки",
+      securite: "Безопасность",
+      deconnexion: "Выход",
+      actualiser: "Обновить",
+      total: "Итого",
+      montant: "Сумма",
+      date: "Дата",
+      heure: "Время",
+      statut: "Статус",
+      enCours: "В процессе",
+      termine: "Завершено",
+      recu: "Получено",
+      enAttente: "Ожидание",
+      echoue: "Неудачно",
+      
+      // Messages génériques - Russe
+      chargerPlus: "Загрузить больше",
+      voirPlus: "Увидеть больше",
+      enSavoirPlus: "Узнать больше",
+      lireLaSuite: "Читать далее",
+      fermerMenu: "Закрыть меню",
+      ouvrirMenu: "Открыть меню",
+      
+      // Navigation - Russe
+      pagePrecedente: "Предыдущая страница",
+      pageSuivante: "Следующая страница",
+      retourAccueil: "Вернуться домой",
+      
+      // Validation formulaires - Russe
+      champsObligatoires: "Пожалуйста, заполните все обязательные поля",
+      emailInvalide: "Пожалуйста, введите действительный адрес электронной почты",
+      telephoneInvalide: "Пожалуйста, введите действительный номер телефона",
+      nomRequis: "Имя обязательно",
+      
+      // Messages de succès génériques - Russe
+      operationReussie: "Операция успешна",
+      sauvegardeReussie: "Сохранение успешно",
+      modificationReussie: "Модификация успешна",
+      suppressionReussie: "Удаление успешно"
     },
     zh: {
       accueil: "首页",
@@ -712,7 +1180,7 @@ function App() {
       aPropos: "关于我们",
       services: "服务",
       contactFooter: "联系",
-      copyright: "© 2025 Imiza tumaini. 版权所有。",
+      copyright: `© ${new Date().getFullYear()} Imiza tumaini. 版权所有。`,
       
       // Soutien Psychologique - Chinois
       bienEtreMental: "您的心理健康是我们的优先事项",
