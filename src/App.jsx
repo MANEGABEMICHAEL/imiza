@@ -1238,7 +1238,85 @@ function App() {
       
       // Messages de succès - Chinois
       rendezVousPris: "✅ 预约成功！我们将尽快与您联系。",
-      inscriptionReussie: "✅ 注册成功！我们将通过电子邮件向您发送详细信息。"
+      inscriptionReussie: "✅ 注册成功！我们将通过电子邮件向您发送详细信息。",
+      
+      // Textes statistiques - Chinois
+      famillesSoutenues: "受支持家庭",
+      formationsDisponibles: "可用培训",
+      expertsBenevoles: "志愿者专家",
+      anneesExperience: "经验年数",
+      
+      // Objectifs - Chinois
+      soutenir10000Familles: "支持10,000个家庭",
+      objectif10000Text: "到2025年，我们的目标是为刚果民主共和国的10,000个军人家庭提供全面支持。",
+      centFormationsParAn: "每年100次培训",
+      centFormationsText: "每年组织100次专业和心理培训课程，以增强家庭能力。",
+      creer500Emplois: "创造500个工作岗位",
+      creer500EmploisText: "通过我们的经济发展计划，为军人家庭成员创造500个就业机会。",
+      
+      // Valeurs - Chinois
+      excellence: "卓越",
+      excellenceText: "在所有服务中追求卓越，保持最高的质量和专业标准。",
+      servicesQualite: "优质服务",
+      formationContinue: "员工持续培训",
+      ameliorationContinue: "持续改进",
+      
+      resilience: "韧性",
+      resilienceText: "发展内在力量和从逆境中恢复的能力，将挑战转化为成长机会。",
+      renforcementPsychologique: "心理强化",
+      soutienTransitions: "过渡支持",
+      cultivationEndurance: "培养耐力",
+      
+      // Messages d'erreur et sécurité - Chinois
+      sessionExpiree: "会话已过期 - 请重新连接",
+      tentativeModification: "修改尝试",
+      accesNonAutorise: "未经授权的访问",
+      erreurChargementImage: "图像加载错误",
+      imageChargeeSucces: "图像成功加载",
+      
+      // Dashboard Admin - Chinois
+      dashboard: "控制面板",
+      statistiques: "统计",
+      utilisateurs: "用户",
+      parametres: "设置",
+      securite: "安全",
+      deconnexion: "登出",
+      actualiser: "刷新",
+      total: "总计",
+      montant: "金额",
+      date: "日期",
+      heure: "时间",
+      statut: "状态",
+      enCours: "进行中",
+      termine: "已完成",
+      recu: "已收到",
+      enAttente: "等待中",
+      echoue: "失败",
+      
+      // Messages génériques - Chinois
+      chargerPlus: "加载更多",
+      voirPlus: "查看更多",
+      enSavoirPlus: "了解更多",
+      lireLaSuite: "阅读更多",
+      fermerMenu: "关闭菜单",
+      ouvrirMenu: "打开菜单",
+      
+      // Navigation - Chinois
+      pagePrecedente: "上一页",
+      pageSuivante: "下一页",
+      retourAccueil: "返回首页",
+      
+      // Validation formulaires - Chinois
+      champsObligatoires: "请填写所有必填字段",
+      emailInvalide: "请输入有效的电子邮件地址",
+      telephoneInvalide: "请输入有效的电话号码",
+      nomRequis: "姓名为必填项",
+      
+      // Messages de succès génériques - Chinois
+      operationReussie: "操作成功",
+      sauvegardeReussie: "保存成功",
+      modificationReussie: "修改成功",
+      suppressionReussie: "删除成功"
     }
   }
   
