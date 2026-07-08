@@ -690,6 +690,30 @@ body::after {
   box-shadow: 0 8px 25px rgba(46, 204, 113, 0.3);
 }
 
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form-buttons button {
+  flex: 1;
+  min-width: 150px;
+}
+
 /* Hero Image Gallery */
 .hero-image {
   animation: slideInRight 1s ease-out;

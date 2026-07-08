@@ -1595,6 +1595,16 @@ function App() {
     alert('✅ Informations copiées! Vous pouvez les coller dans votre email.')
   }
 
+  const handleWhatsAppContact = () => {
+    const phoneNumber = '243992503701' // Votre numéro WhatsApp
+    const message = `Bonjour, je vous contacte depuis le site Imiza Tumaini.\n\nNom: ${contactForm.name}\nEmail: ${contactForm.email}\nTéléphone: ${contactForm.phone}\nType: ${contactForm.type}\n\nMessage: ${contactForm.message}`
+    
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(whatsappLink, '_blank')
+    
+    alert('💬 WhatsApp va s\'ouvrir. Envoyez le message pour nous contacter directement!')
+  }
+
   const handleUserDashboard = async () => {
     // Si l'utilisateur a déjà fait des dons avec ce téléphone, les récupérer
     if (donorInfo.phone) {
@@ -2466,6 +2476,7 @@ function App() {
                   </div>
                   <div className="form-buttons">
                     <button type="submit" className="btn-primary">📧 Envoyer via Email</button>
+                    <button type="button" className="btn-whatsapp" onClick={handleWhatsAppContact}>💬 Contacter via WhatsApp</button>
                     <button type="button" className="btn-secondary" onClick={handleCopyContactInfo}>📋 Copier les infos</button>
                   </div>
                 </form>
