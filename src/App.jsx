@@ -1565,42 +1565,34 @@ function App() {
     setActiveSection('donation')
   }
 
-  const handleContactSubmit = async (e) => {
+  const handleContactSubmit = (e) => {
     e.preventDefault()
     
-    // Using Formspree for reliable email delivery
-    const formData = new FormData()
-    formData.append('name', contactForm.name)
-    formData.append('email', contactForm.email)
-    formData.append('phone', contactForm.phone)
-    formData.append('type', contactForm.type)
-    formData.append('message', contactForm.message)
+    const recipientEmail = 'manegabemichael5@gmail.com'
+    const subject = `Contact depuis Imiza Tumaini - ${contactForm.type || 'Général'}`
+    const body = `Nom: ${contactForm.name}\nEmail: ${contactForm.email}\nTéléphone: ${contactForm.phone}\nType de demande: ${contactForm.type}\n\nMessage:\n${contactForm.message}`
     
-    try {
-      const response = await fetch('https://formspree.io/f/xvgpzjzq', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-      
-      if (response.ok) {
-        alert('✅ Message envoyé avec succès! Nous vous répondrons bientôt.')
-        setContactForm({
-          name: '',
-          email: '',
-          phone: '',
-          type: '',
-          message: ''
-        })
-      } else {
-        alert('❌ Erreur lors de l\'envoi du message. Veuillez réessayer.')
-      }
-    } catch (error) {
-      console.error('Error sending message:', error)
-      alert('❌ Erreur de connexion. Veuillez réessayer.')
-    }
+    const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    
+    // Open email client
+    window.location.href = mailtoLink
+    
+    alert('📧 Votre client email va s\'ouvrir. Cliquez sur "Envoyer" dans votre email pour finaliser l\'envoi.')
+    
+    // Reset form
+    setContactForm({
+      name: '',
+      email: '',
+      phone: '',
+      type: '',
+      message: ''
+    })
+  }
+
+  const handleCopyContactInfo = () => {
+    const contactInfo = `Nom: ${contactForm.name}\nEmail: ${contactForm.email}\nTéléphone: ${contactForm.phone}\nType: ${contactForm.type}\nMessage: ${contactForm.message}`
+    navigator.clipboard.writeText(contactInfo)
+    alert('✅ Informations copiées! Vous pouvez les coller dans votre email.')
   }
 
   const handleUserDashboard = async () => {
@@ -2472,7 +2464,10 @@ function App() {
                       onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
                     ></textarea>
                   </div>
-                  <button type="submit" className="btn-primary">Envoyer le Message</button>
+                  <div className="form-buttons">
+                    <button type="submit" className="btn-primary">📧 Envoyer via Email</button>
+                    <button type="button" className="btn-secondary" onClick={handleCopyContactInfo}>📋 Copier les infos</button>
+                  </div>
                 </form>
               </div>
               <div className="contact-info">
