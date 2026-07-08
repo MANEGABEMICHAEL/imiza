@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard'
 import './components/Dashboard.css'
 
 // Import des images locales
+import imgLogo from './assets/IMIZATUMAINILOGO.png'
 import imgEnfants from './assets/enfants.jpeg'
 import img1 from './assets/WhatsApp Image 2026-04-06 at 13.14.54.jpeg'
 import img2 from './assets/WhatsApp Image 2026-04-06 at 13.14.56 (1).jpeg'
@@ -1714,7 +1715,7 @@ function App() {
       <header className="header">
         <div className="header-content">
           <div className="logo-container">
-            <img src="/IMIZATUMAINILOGO.png" alt="Imiza Tumaini" className="logo-image" />
+            <img src={imgLogo} alt="Imiza Tumaini" className="logo-image" />
           </div>
           <button className="mobile-menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <span></span><span></span><span></span>
