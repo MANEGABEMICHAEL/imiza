@@ -21,35 +21,19 @@ import img13 from './assets/WhatsApp Image 2026-04-06 at 13.14.59.jpeg'
 
 // Security measures
 const SECURITY_CONFIG = {
-  preventRightClick: true,
-  preventCopy: true,
-  preventDevTools: true,
-  preventPrint: true,
-  preventSave: true,
+  preventRightClick: false,
+  preventCopy: false,
+  preventDevTools: false,
+  preventPrint: false,
+  preventSave: false,
   encryptData: true,
-  sessionTimeout: 300000, // 5 minutes
-  maxLoginAttempts: 3
+  sessionTimeout: 0, // Disabled
+  maxLoginAttempts: 10
 }
 
-// Anti-tampering detection (less strict)
+// Anti-tampering detection (disabled)
 const detectTampering = () => {
-  let modificationCount = 0
-  const maxModifications = 5
-  
-  const checkInterval = setInterval(() => {
-    // Only check for major modifications, not normal React updates
-    const currentHTML = document.documentElement.outerHTML
-    if (currentHTML.includes('TENTATIVE DE MODIFICATION') || 
-        currentHTML.includes('ACCÈS NON AUTORISÉ') ||
-        currentHTML.includes('🚫')) {
-      modificationCount++
-      if (modificationCount >= maxModifications) {
-        clearInterval(checkInterval)
-        return
-      }
-    }
-  }, 5000) // Check every 5 seconds instead of 1 second
-  return checkInterval
+  return null // Disabled - causing access issues
 }
 
 // Encrypt sensitive data
@@ -65,14 +49,11 @@ const decryptData = (encryptedData) => {
   }
 }
 
-// Session security
+// Session security (disabled)
 let sessionTimer = null
 const resetSessionTimer = () => {
-  clearTimeout(sessionTimer)
-  sessionTimer = setTimeout(() => {
-    alert('⏰ SESSION EXPIRÉE - Veuillez vous reconnecter')
-    window.location.reload()
-  }, SECURITY_CONFIG.sessionTimeout)
+  // Disabled - causing access issues
+  return
 }
 
 function App() {
@@ -1323,76 +1304,10 @@ function App() {
   const t = translations[currentLang]
   
   useEffect(() => {
-    // Security initialization
+    // Security initialization (disabled - causing access issues)
     const initializeSecurity = () => {
-      // Prevent right click
-      if (SECURITY_CONFIG.preventRightClick) {
-        document.addEventListener('contextmenu', (e) => {
-          e.preventDefault()
-          return false
-        })
-      }
-      
-      // Prevent save shortcuts
-      document.addEventListener('keydown', (e) => {
-        if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S')) {
-          e.preventDefault()
-          alert('🚫 SAUVEGARDE NON AUTORISÉE')
-          return false
-        }
-        if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'C')) {
-          e.preventDefault()
-          return false
-        }
-        if ((e.ctrlKey || e.metaKey) && (e.key === 'v' || e.key === 'V')) {
-          e.preventDefault()
-          return false
-        }
-        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
-          e.preventDefault()
-          alert(' OUTILS DÉVELOPPEUR NON AUTORISÉS')
-          return false
-        }
-      })
-      
-      // Detect dev tools
-      if (SECURITY_CONFIG.preventDevTools) {
-        const devtools = {
-          open: false,
-          orientation: null
-        }
-        
-        const threshold = 160
-        setInterval(() => {
-          if (window.outerHeight - window.innerHeight > threshold || 
-              window.outerWidth - window.innerWidth > threshold) {
-            if (!devtools.open) {
-              devtools.open = true
-              alert(' OUTILS DÉVELOPPEUR DÉTECTÉS - Redirection...')
-              window.location.reload()
-            }
-          } else {
-            devtools.open = false
-          }
-        }, 500)
-      }
-      
-      // Start tampering detection (disabled for normal operation)
-      // const tamperCheck = detectTampering()
-      
-      // Initialize session timer
-      resetSessionTimer()
-      
-      // Activity monitoring
-      const activityEvents = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart']
-      activityEvents.forEach(event => {
-        document.addEventListener(event, resetSessionTimer)
-      })
-      
-      return () => {
-        // clearInterval(tamperCheck)
-        clearTimeout(sessionTimer)
-      }
+      // All security measures disabled to prevent access blocking
+      return () => {}
     }
     
     const cleanup = initializeSecurity()
