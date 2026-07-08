@@ -104,6 +104,13 @@ function App() {
     training: '',
     message: ''
   })
+  const [contactForm, setContactForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    type: '',
+    message: ''
+  })
   
   // Translation system
   const translations = {
@@ -1558,6 +1565,26 @@ function App() {
     setActiveSection('donation')
   }
 
+  const handleContactSubmit = (e) => {
+    e.preventDefault()
+    
+    const recipientEmail = 'manegabemichael5@gmail.com'
+    const subject = `Contact depuis Imiza Tumaini - ${contactForm.type || 'Général'}`
+    const body = `Nom: ${contactForm.name}\nEmail: ${contactForm.email}\nTéléphone: ${contactForm.phone}\nType de demande: ${contactForm.type}\n\nMessage:\n${contactForm.message}`
+    
+    const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.location.href = mailtoLink
+    
+    // Reset form
+    setContactForm({
+      name: '',
+      email: '',
+      phone: '',
+      type: '',
+      message: ''
+    })
+  }
+
   const handleUserDashboard = async () => {
     // Si l'utilisateur a déjà fait des dons avec ce téléphone, les récupérer
     if (donorInfo.phone) {
@@ -2378,12 +2405,39 @@ function App() {
             <div className="contact-container">
               <div className="contact-form">
                 <h2>{t.envoyezMessage}</h2>
-                <form>
-                  <div className="form-group"><input type="text" placeholder={t.votreNomComplet} required /></div>
-                  <div className="form-group"><input type="email" placeholder={t.votreEmail} required /></div>
-                  <div className="form-group"><input type="tel" placeholder={t.votreTelephone} /></div>
+                <form onSubmit={handleContactSubmit}>
                   <div className="form-group">
-                    <select required>
+                    <input 
+                      type="text" 
+                      placeholder={t.votreNomComplet} 
+                      required 
+                      value={contactForm.name}
+                      onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input 
+                      type="email" 
+                      placeholder={t.votreEmail} 
+                      required 
+                      value={contactForm.email}
+                      onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input 
+                      type="tel" 
+                      placeholder={t.votreTelephone} 
+                      value={contactForm.phone}
+                      onChange={(e) => setContactForm({...contactForm, phone: e.target.value})}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <select 
+                      required 
+                      value={contactForm.type}
+                      onChange={(e) => setContactForm({...contactForm, type: e.target.value})}
+                    >
                       <option value="">Sélectionnez le type de demande</option>
                       <option value="psychological">Soutien psychologique</option>
                       <option value="training">Information sur les formations</option>
@@ -2391,7 +2445,15 @@ function App() {
                       <option value="other">Autre</option>
                     </select>
                   </div>
-                  <div className="form-group"><textarea placeholder="Votre message" rows="5" required></textarea></div>
+                  <div className="form-group">
+                    <textarea 
+                      placeholder="Votre message" 
+                      rows="5" 
+                      required
+                      value={contactForm.message}
+                      onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
+                    ></textarea>
+                  </div>
                   <button type="submit" className="btn-primary">Envoyer le Message</button>
                 </form>
               </div>
@@ -2421,7 +2483,7 @@ function App() {
                       <span className="contact-icon">📧</span>
                       <div className="contact-text">
                         <strong>Email</strong>
-                        <p>info@imizatumainikwamwanajeshi.cd<br/>support@famillesmilitaires.cd</p>
+                        <p>manegabemichael5@gmail.com</p>
                       </div>
                     </div>
                     <div className="contact-detail">
@@ -2451,7 +2513,7 @@ function App() {
           </div>
           <div className="footer-section">
             <h3>{t.contactFooter}</h3>
-            <p>📍 Goma, RDC<br/>📞 +243 992 503 701<br/>📧 info@imizatumainikwamwanajeshi.cd</p>
+            <p>📍 Goma, RDC<br/>📞 +243 992 503 701<br/>📧 manegabemichael5@gmail.com</p>
           </div>
         </div>
         <div className="footer-bottom">
