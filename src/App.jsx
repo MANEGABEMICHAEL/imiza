@@ -1604,6 +1604,8 @@ function App() {
     
     alert('💬 WhatsApp va s\'ouvrir. Envoyez le message pour nous contacter directement!')
   }
+  
+  // Force Vercel redeploy - Updated July 8, 2026
 
   const handleUserDashboard = async () => {
     // Si l'utilisateur a déjà fait des dons avec ce téléphone, les récupérer
